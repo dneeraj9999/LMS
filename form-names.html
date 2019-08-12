@@ -1,0 +1,118 @@
+            <form method="POST" action="insertapplication.php" class="register-form" id="register-form">
+    		<!-- <fieldset disabled="disabled"> -->
+                           <div >
+                               Name of the student:
+                                <input type="text" value="<?php echo $_SESSION['Name']; ?>"  readonly="true" />
+                                 </div>
+                            <div >
+                               Roll No:
+                                <input type="text" name="roll"  />
+                                 </div>
+                             <div >
+
+				    			From: 	
+				    			<input type="date"   name="sd">
+				    			<br>
+				    			To:
+				    			<input type="date"   name="ed">
+				    			
+                                Attendance:
+                                <input type="none" value="<?php echo $_SESSION['att']; ?>" name="pass" id="pass" readonly="true"/>
+                            </div>
+                            <div >
+                                Reasons for leave:
+                                <input type="text" name="reason" />
+                            </div>
+                       </div>
+                </div>
+		
+			 </div>
+							<div >
+								<input type="reset" class="btn btn-secondary" value="Reset" title="Reset">
+								<input type="submit" name="submit" class="btn btn-primary" value="Apply" title="Apply for leave">
+							</div>
+									</form>
+
+
+
+
+
+
+                                    modal---------------
+
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Leave Application</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+            <div class="container">
+                <div class="signup-container">
+                    <div>
+                        <h2 class="form-title">Leave Application</h2>
+            
+                                    <form method="POST" action="insertapplication.php" class="register-form" id="register-form">
+            <!-- <fieldset disabled="disabled"> -->
+                            <div >
+                               Name of the student:
+                                <input type="text" value="<?php echo $_SESSION['Name']; ?>"  readonly="true" />
+                                 </div>
+                            <div >
+                               Roll No:
+                                <input type="text" name="roll"  />
+                                 </div>
+                            <div>
+
+                                From:   
+                                <input type="date"   name="sd">
+                                <br>
+                                To:
+                                <input type="date"   name="ed">
+                                
+                                Attendance:
+                                <input type="none" value="<?php echo $_SESSION['att']; ?>" name="pass" id="pass" readonly="true"/>
+                            </div>
+                            <div >
+                                Reasons for leave:
+                                <input type="text" name="reason" />
+                            </div>
+                            <div >
+                                List of signatories:
+                                <input type="checkbox" value="PRINCIPAL" name="reason" />PRINCIPAL
+                                <br>
+                                <input type="checkbox" value="HOD" name="reason" />HOD
+                                <br>
+                                <input type="checkbox" value="<?php echo $_SESSION['cc']; ?>" name="reason" /><?php echo $_SESSION['cc']; ?>
+                                <br>
+                                <input type="checkbox" value="<?php  echo $_SESSION['parId']; ?>" name="reason" /><?php echo $_SESSION['parId']; ?>
+                                <br>
+                                <input type="reset" class="btn btn-secondary" value="Reset" title="Reset">
+                                <input type="submit" name="submit" class="btn btn-primary" value="Apply" title="Apply for leave">
+                                
+                            </div>
+
+
+                       </div>
+                </div>
+        
+             </div>
+                            <div class="modal-footer">
+                            </div>
+                                    </form>
+
+                    
+
+
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="card-footer text-muted">
+                    </div>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,97 @@
+  
+
+.checkboxWrapper {
+  width: 120px;
+  height: 65px;
+  position: relative;
+  margin: 20px auto;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  background: #fff;
+}
+
+.checkboxWrapper1 {
+  width: 120px;
+  height: 65px;
+  /*position: relative;*/
+  margin: 20px auto;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+}
+
+
+.checkboxWrapper label {
+  position: absolute;
+  left: 4px;
+  top: 27px;
+  width: 56px;
+  height: 56px;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+  background: red;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+
+.checkboxWrapper svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.checkboxWrapper svg path {
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-width: 4;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+  fill: none;
+  -webkit-transition: stroke-dashoffset 0.2s;
+  transition: stroke-dashoffset 0.2s;
+}
+
+.checkboxWrapper .checkmark path {
+  opacity: 0;
+}
+
+.checkboxWrapper .checkmark path:first-child{
+  stroke-dashoffset: 27px;
+}
+
+.checkboxWrapper .checkmark path:last-child{
+  stroke-dashoffset: 11px;
+}
+
+.checkboxWrapper .cross path {
+  opacity: 1;
+  stroke-dashoffset: 0px;
+}
+
+.checkboxWrapper input[type=checkbox] {
+  display: none;
+}
+
+.checkboxWrapper input[type=checkbox]:checked + label {
+  top: 27px;
+  left: 59px;
+  background:  green   ;
+}
+
+.checkboxWrapper input[type=checkbox]:checked + label .checkmark path {
+  opacity: 1;
+  stroke-dashoffset: 0px;
+}
+
+.checkboxWrapper input[type=checkbox]:checked + label .cross path {
+   opacity: 0;
+  stroke-dashoffset: 13px;
+ }
